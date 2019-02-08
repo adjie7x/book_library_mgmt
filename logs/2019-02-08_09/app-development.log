@@ -1,0 +1,797 @@
+2019-02-08 09:13:55 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.mitrais.book_library_mgmt.BookLibraryMgmtApplicationTests], using SpringBootContextLoader
+2019-02-08 09:13:55 - Could not detect default resource locations for test class [com.mitrais.book_library_mgmt.BookLibraryMgmtApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-02-08 09:13:55 - Could not detect default configuration classes for test class [com.mitrais.book_library_mgmt.BookLibraryMgmtApplicationTests]: BookLibraryMgmtApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-02-08 09:13:55 - Found @SpringBootConfiguration com.mitrais.book_library_mgmt.BookLibraryMgmtApplication for test class com.mitrais.book_library_mgmt.BookLibraryMgmtApplicationTests
+2019-02-08 09:13:55 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-02-08 09:13:55 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3059cbc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7ea9e1e2, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@24fcf36f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@10feca44, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3fb1549b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@ea6147e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4d02f94e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2b48a640, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1e683a3e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2053d869, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7a419da4, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@14555e0a]
+2019-02-08 09:13:55 - Starting BookLibraryMgmtApplicationTests on MTPC7080 with PID 12244 (started by Aji_AM600 in D:\01_DEVELOPMENT\01_JAVA\01_WORKSPACE\01_GIT\01_TASKs\02_SIMPLE_BOOK_LIB_MGMT\book_library_mgmt)
+2019-02-08 09:13:55 - No active profile set, falling back to default profiles: default
+2019-02-08 09:13:56 - No MyBatis mapper was found in '[com.mitrais.book_library_mgmt]' package. Please check your configuration.
+2019-02-08 09:13:56 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-08 09:13:56 - Finished Spring Data repository scanning in 47ms. Found 1 repository interfaces.
+2019-02-08 09:13:56 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ef79b091] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:13:56 - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$6ef9fdc3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:13:56 - Failed to load driver class com.mysql.cj.jdbc.Driver from HikariConfig class classloader sun.misc.Launcher$AppClassLoader@6bc7c054
+2019-02-08 09:13:56 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'inMemoryDatabaseShutdownExecutor' defined in class path resource [org/springframework/boot/devtools/autoconfigure/DevToolsDataSourceAutoConfiguration.class]: Unsatisfied dependency expressed through method 'inMemoryDatabaseShutdownExecutor' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under '' to com.zaxxer.hikari.HikariDataSource
+2019-02-08 09:13:56 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-02-08 09:13:56 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under '' to com.zaxxer.hikari.HikariDataSource:
+
+    Property: driverclassname
+    Value: com.mysql.cj.jdbc.Driver
+    Origin: "driverClassName" from property source "source"
+    Reason: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+
+Action:
+
+Update your application's configuration
+
+2019-02-08 09:13:56 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@3059cbc] to prepare test instance [com.mitrais.book_library_mgmt.BookLibraryMgmtApplicationTests@6cd166b8]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'inMemoryDatabaseShutdownExecutor' defined in class path resource [org/springframework/boot/devtools/autoconfigure/DevToolsDataSourceAutoConfiguration.class]: Unsatisfied dependency expressed through method 'inMemoryDatabaseShutdownExecutor' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under '' to com.zaxxer.hikari.HikariDataSource
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:767)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:508)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:307)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1083)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:853)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:127)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 27 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under '' to com.zaxxer.hikari.HikariDataSource
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:625)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:605)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:273)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1239)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1166)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:855)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:758)
+	... 47 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under '' to com.zaxxer.hikari.HikariDataSource
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:620)
+	... 61 common frames omitted
+Caused by: org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under '' to com.zaxxer.hikari.HikariDataSource
+	at org.springframework.boot.context.properties.bind.Binder.handleBindError(Binder.java:249)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:225)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:208)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:177)
+	at org.springframework.boot.jdbc.DataSourceBuilder.bind(DataSourceBuilder.java:97)
+	at org.springframework.boot.jdbc.DataSourceBuilder.build(DataSourceBuilder.java:77)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:43)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:83)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 62 common frames omitted
+Caused by: java.lang.IllegalStateException: Unable to set value for property driver-class-name
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder$BeanProperty.setValue(JavaBeanBinder.java:333)
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder.bind(JavaBeanBinder.java:89)
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder.bind(JavaBeanBinder.java:72)
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder.bind(JavaBeanBinder.java:54)
+	at org.springframework.boot.context.properties.bind.Binder.lambda$null$4(Binder.java:344)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1359)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindBean$5(Binder.java:345)
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:448)
+	at org.springframework.boot.context.properties.bind.Binder$Context.withBean(Binder.java:434)
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$400(Binder.java:388)
+	at org.springframework.boot.context.properties.bind.Binder.bindBean(Binder.java:342)
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:277)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:220)
+	... 73 common frames omitted
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder$BeanProperty.setValue(JavaBeanBinder.java:330)
+	... 93 common frames omitted
+Caused by: java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at com.zaxxer.hikari.HikariConfig.setDriverClassName(HikariConfig.java:497)
+	... 98 common frames omitted
+2019-02-08 09:15:02 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.mitrais.book_library_mgmt.BookLibraryMgmtApplicationTests], using SpringBootContextLoader
+2019-02-08 09:15:02 - Could not detect default resource locations for test class [com.mitrais.book_library_mgmt.BookLibraryMgmtApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-02-08 09:15:02 - Could not detect default configuration classes for test class [com.mitrais.book_library_mgmt.BookLibraryMgmtApplicationTests]: BookLibraryMgmtApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-02-08 09:15:02 - Found @SpringBootConfiguration com.mitrais.book_library_mgmt.BookLibraryMgmtApplication for test class com.mitrais.book_library_mgmt.BookLibraryMgmtApplicationTests
+2019-02-08 09:15:03 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-02-08 09:15:03 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6babf3bf, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3059cbc, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7ea9e1e2, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@24fcf36f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@10feca44, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3fb1549b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@ea6147e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4d02f94e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2b48a640, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1e683a3e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2053d869, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7a419da4]
+2019-02-08 09:15:03 - Starting BookLibraryMgmtApplicationTests on MTPC7080 with PID 9832 (started by Aji_AM600 in D:\01_DEVELOPMENT\01_JAVA\01_WORKSPACE\01_GIT\01_TASKs\02_SIMPLE_BOOK_LIB_MGMT\book_library_mgmt)
+2019-02-08 09:15:03 - No active profile set, falling back to default profiles: default
+2019-02-08 09:15:03 - No MyBatis mapper was found in '[com.mitrais.book_library_mgmt]' package. Please check your configuration.
+2019-02-08 09:15:03 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-08 09:15:03 - Finished Spring Data repository scanning in 31ms. Found 1 repository interfaces.
+2019-02-08 09:15:04 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2c433692] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:15:04 - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$abc383c4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:15:04 - HikariPool-1 - Starting...
+2019-02-08 09:15:04 - HikariPool-1 - Start completed.
+2019-02-08 09:15:04 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-08 09:15:04 - HHH000412: Hibernate Core {5.3.7.Final}
+2019-02-08 09:15:04 - HHH000206: hibernate.properties not found
+2019-02-08 09:15:04 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-02-08 09:15:05 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-02-08 09:15:05 - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2019-02-08 09:15:05 - drop table if exists book
+2019-02-08 09:15:05 - drop table if exists shelf
+2019-02-08 09:15:05 - create table book (id varchar(255) not null, author varchar(30) not null, is_deleted boolean NOT NULL DEFAULT false, is_shelved boolean NOT NULL DEFAULT false, isbn varchar(25) not null, title varchar(50) not null, shelf_id varchar(255) not null, primary key (id)) engine=MyISAM
+2019-02-08 09:15:05 - create table shelf (id varchar(255) not null, current_capacity bigint, max_capacity bigint, primary key (id)) engine=MyISAM
+2019-02-08 09:15:05 - alter table book add constraint FKp7vf5b2vkphwbbfntbcoo7aby foreign key (shelf_id) references shelf (id)
+2019-02-08 09:15:05 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@23648d2d'
+2019-02-08 09:15:05 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-08 09:15:06 - Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-08 09:15:06 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-02-08 09:15:07 - Started BookLibraryMgmtApplicationTests in 4.062 seconds (JVM running for 4.747)
+2019-02-08 09:15:07 - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-08 09:15:07 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-02-08 09:15:07 - HikariPool-1 - Shutdown initiated...
+2019-02-08 09:15:07 - HikariPool-1 - Shutdown completed.
+2019-02-08 09:15:12 - Starting BookLibraryMgmtApplication on MTPC7080 with PID 4112 (D:\01_DEVELOPMENT\01_JAVA\01_WORKSPACE\01_GIT\01_TASKs\02_SIMPLE_BOOK_LIB_MGMT\book_library_mgmt\target\classes started by Aji_AM600 in D:\01_DEVELOPMENT\01_JAVA\01_WORKSPACE\01_GIT\01_TASKs\02_SIMPLE_BOOK_LIB_MGMT\book_library_mgmt)
+2019-02-08 09:15:12 - No active profile set, falling back to default profiles: default
+2019-02-08 09:15:12 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-02-08 09:15:12 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-02-08 09:15:13 - No MyBatis mapper was found in '[com.mitrais.book_library_mgmt]' package. Please check your configuration.
+2019-02-08 09:15:13 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-08 09:15:13 - Finished Spring Data repository scanning in 31ms. Found 1 repository interfaces.
+2019-02-08 09:15:13 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8148d25] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:15:13 - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$8794da57] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:15:13 - Tomcat initialized with port(s): 8082 (http)
+2019-02-08 09:15:13 - Initializing ProtocolHandler ["http-nio-8082"]
+2019-02-08 09:15:13 - Starting service [Tomcat]
+2019-02-08 09:15:13 - Starting Servlet Engine: Apache Tomcat/9.0.12
+2019-02-08 09:15:13 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Git\cmd;C:\Users\Aji_AM600\AppData\Local\Microsoft\WindowsApps;C:\Users\Aji_AM600\AppData\Local\Programs\Microsoft VS Code\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\Aji_AM600\AppData\Local\Pandoc\;D:\05_TOOLS\apache-maven-3.6.0\bin;C:\Program Files\Java\jdk1.8.0_192\bin;;.]
+2019-02-08 09:15:14 - Initializing Spring embedded WebApplicationContext
+2019-02-08 09:15:14 - Root WebApplicationContext: initialization completed in 1627 ms
+2019-02-08 09:15:14 - Servlet dispatcherServlet mapped to [/]
+2019-02-08 09:15:14 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-08 09:15:14 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-08 09:15:14 - Mapping filter: 'formContentFilter' to: [/*]
+2019-02-08 09:15:14 - Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-08 09:15:14 - HikariPool-1 - Starting...
+2019-02-08 09:15:14 - HikariPool-1 - Start completed.
+2019-02-08 09:15:14 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-08 09:15:14 - HHH000412: Hibernate Core {5.3.7.Final}
+2019-02-08 09:15:14 - HHH000206: hibernate.properties not found
+2019-02-08 09:15:14 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-02-08 09:15:14 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-02-08 09:15:14 - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2019-02-08 09:15:15 - drop table if exists book
+2019-02-08 09:15:15 - drop table if exists shelf
+2019-02-08 09:15:15 - create table book (id varchar(255) not null, author varchar(30) not null, is_deleted boolean NOT NULL DEFAULT false, is_shelved boolean NOT NULL DEFAULT false, isbn varchar(25) not null, title varchar(50) not null, shelf_id varchar(255) not null, primary key (id)) engine=MyISAM
+2019-02-08 09:15:15 - create table shelf (id varchar(255) not null, current_capacity bigint, max_capacity bigint, primary key (id)) engine=MyISAM
+2019-02-08 09:15:15 - alter table book add constraint FKp7vf5b2vkphwbbfntbcoo7aby foreign key (shelf_id) references shelf (id)
+2019-02-08 09:15:15 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@70aea983'
+2019-02-08 09:15:15 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-08 09:15:15 - LiveReload server is running on port 35729
+2019-02-08 09:15:15 - Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-08 09:15:16 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-02-08 09:15:16 - Starting ProtocolHandler ["http-nio-8082"]
+2019-02-08 09:15:16 - Using a shared selector for servlet write/read
+2019-02-08 09:15:16 - Tomcat started on port(s): 8082 (http) with context path ''
+2019-02-08 09:15:16 - Started BookLibraryMgmtApplication in 4.269 seconds (JVM running for 4.716)
+2019-02-08 09:26:27 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.mitrais.book_library_mgmt.BookLibraryMgmtApplicationTests], using SpringBootContextLoader
+2019-02-08 09:26:27 - Could not detect default resource locations for test class [com.mitrais.book_library_mgmt.BookLibraryMgmtApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-02-08 09:26:27 - Could not detect default configuration classes for test class [com.mitrais.book_library_mgmt.BookLibraryMgmtApplicationTests]: BookLibraryMgmtApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-02-08 09:26:27 - Found @SpringBootConfiguration com.mitrais.book_library_mgmt.BookLibraryMgmtApplication for test class com.mitrais.book_library_mgmt.BookLibraryMgmtApplicationTests
+2019-02-08 09:26:27 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-02-08 09:26:27 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6babf3bf, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3059cbc, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7ea9e1e2, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@24fcf36f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@10feca44, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3fb1549b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@ea6147e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4d02f94e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2b48a640, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1e683a3e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2053d869, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7a419da4]
+2019-02-08 09:26:27 - Starting BookLibraryMgmtApplicationTests on MTPC7080 with PID 15068 (started by Aji_AM600 in D:\01_DEVELOPMENT\01_JAVA\01_WORKSPACE\01_GIT\01_TASKs\02_SIMPLE_BOOK_LIB_MGMT\book_library_mgmt)
+2019-02-08 09:26:27 - No active profile set, falling back to default profiles: default
+2019-02-08 09:26:28 - No MyBatis mapper was found in '[com.mitrais.book_library_mgmt]' package. Please check your configuration.
+2019-02-08 09:26:28 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-08 09:26:28 - Finished Spring Data repository scanning in 31ms. Found 1 repository interfaces.
+2019-02-08 09:26:28 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2c433692] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:26:28 - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$abc383c4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:26:28 - HikariPool-1 - Starting...
+2019-02-08 09:26:28 - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-02-08 09:26:28 - HikariPool-1 - Start completed.
+2019-02-08 09:26:28 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-08 09:26:28 - HHH000412: Hibernate Core {5.3.7.Final}
+2019-02-08 09:26:28 - HHH000206: hibernate.properties not found
+2019-02-08 09:26:29 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-02-08 09:26:29 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-02-08 09:26:29 - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2019-02-08 09:26:29 - alter table book drop foreign key FKp7vf5b2vkphwbbfntbcoo7aby
+2019-02-08 09:26:29 - GenerationTarget encountered exception accepting command : Error executing DDL "alter table book drop foreign key FKp7vf5b2vkphwbbfntbcoo7aby" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table book drop foreign key FKp7vf5b2vkphwbbfntbcoo7aby" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:375)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:359)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:331)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:230)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:154)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:126)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:144)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:72)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:310)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:467)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:939)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1741)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1083)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:853)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:127)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'book_lib_mgmt.book' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:782)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:666)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 61 common frames omitted
+2019-02-08 09:26:29 - drop table if exists book
+2019-02-08 09:26:29 - drop table if exists shelf
+2019-02-08 09:26:29 - create table book (id varchar(255) not null, author varchar(30) not null, is_deleted boolean NOT NULL DEFAULT false, is_shelved boolean NOT NULL DEFAULT false, isbn varchar(25) not null, title varchar(50) not null, shelf_id varchar(255) not null, primary key (id)) engine=InnoDB
+2019-02-08 09:26:29 - create table shelf (id varchar(255) not null, current_capacity bigint, max_capacity bigint, primary key (id)) engine=InnoDB
+2019-02-08 09:26:29 - alter table book add constraint FKp7vf5b2vkphwbbfntbcoo7aby foreign key (shelf_id) references shelf (id)
+2019-02-08 09:26:29 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7f426ddd'
+2019-02-08 09:26:29 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-08 09:26:30 - Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-08 09:26:30 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-02-08 09:26:31 - Started BookLibraryMgmtApplicationTests in 3.935 seconds (JVM running for 4.602)
+2019-02-08 09:26:31 - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-08 09:26:31 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-02-08 09:26:31 - HikariPool-1 - Shutdown initiated...
+2019-02-08 09:26:31 - HikariPool-1 - Shutdown completed.
+2019-02-08 09:26:34 - Starting BookLibraryMgmtApplication on MTPC7080 with PID 13116 (D:\01_DEVELOPMENT\01_JAVA\01_WORKSPACE\01_GIT\01_TASKs\02_SIMPLE_BOOK_LIB_MGMT\book_library_mgmt\target\classes started by Aji_AM600 in D:\01_DEVELOPMENT\01_JAVA\01_WORKSPACE\01_GIT\01_TASKs\02_SIMPLE_BOOK_LIB_MGMT\book_library_mgmt)
+2019-02-08 09:26:34 - No active profile set, falling back to default profiles: default
+2019-02-08 09:26:34 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-02-08 09:26:34 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-02-08 09:26:35 - No MyBatis mapper was found in '[com.mitrais.book_library_mgmt]' package. Please check your configuration.
+2019-02-08 09:26:35 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-08 09:26:35 - Finished Spring Data repository scanning in 31ms. Found 1 repository interfaces.
+2019-02-08 09:26:35 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fbba0d40] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:26:35 - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$7b3a5a72] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:26:35 - Tomcat initialized with port(s): 8082 (http)
+2019-02-08 09:26:35 - Initializing ProtocolHandler ["http-nio-8082"]
+2019-02-08 09:26:36 - Starting service [Tomcat]
+2019-02-08 09:26:36 - Starting Servlet Engine: Apache Tomcat/9.0.12
+2019-02-08 09:26:36 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Git\cmd;C:\Users\Aji_AM600\AppData\Local\Microsoft\WindowsApps;C:\Users\Aji_AM600\AppData\Local\Programs\Microsoft VS Code\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\Aji_AM600\AppData\Local\Pandoc\;D:\05_TOOLS\apache-maven-3.6.0\bin;C:\Program Files\Java\jdk1.8.0_192\bin;;.]
+2019-02-08 09:26:36 - Initializing Spring embedded WebApplicationContext
+2019-02-08 09:26:36 - Root WebApplicationContext: initialization completed in 1532 ms
+2019-02-08 09:26:36 - Servlet dispatcherServlet mapped to [/]
+2019-02-08 09:26:36 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-08 09:26:36 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-08 09:26:36 - Mapping filter: 'formContentFilter' to: [/*]
+2019-02-08 09:26:36 - Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-08 09:26:36 - HikariPool-1 - Starting...
+2019-02-08 09:26:36 - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-02-08 09:26:36 - HikariPool-1 - Start completed.
+2019-02-08 09:26:36 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-08 09:26:36 - HHH000412: Hibernate Core {5.3.7.Final}
+2019-02-08 09:26:36 - HHH000206: hibernate.properties not found
+2019-02-08 09:26:36 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-02-08 09:26:36 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-02-08 09:26:36 - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2019-02-08 09:26:37 - alter table book drop foreign key FKp7vf5b2vkphwbbfntbcoo7aby
+2019-02-08 09:26:37 - drop table if exists book
+2019-02-08 09:26:37 - drop table if exists shelf
+2019-02-08 09:26:37 - create table book (id varchar(255) not null, author varchar(30) not null, is_deleted boolean NOT NULL DEFAULT false, is_shelved boolean NOT NULL DEFAULT false, isbn varchar(25) not null, title varchar(50) not null, shelf_id varchar(255) not null, primary key (id)) engine=InnoDB
+2019-02-08 09:26:37 - create table shelf (id varchar(255) not null, current_capacity bigint, max_capacity bigint, primary key (id)) engine=InnoDB
+2019-02-08 09:26:37 - alter table book add constraint FKp7vf5b2vkphwbbfntbcoo7aby foreign key (shelf_id) references shelf (id)
+2019-02-08 09:26:37 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@47ceb6fa'
+2019-02-08 09:26:37 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-08 09:26:37 - LiveReload server is running on port 35729
+2019-02-08 09:26:38 - Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-08 09:26:38 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-02-08 09:26:38 - Starting ProtocolHandler ["http-nio-8082"]
+2019-02-08 09:26:38 - Using a shared selector for servlet write/read
+2019-02-08 09:26:38 - Tomcat started on port(s): 8082 (http) with context path ''
+2019-02-08 09:26:38 - Started BookLibraryMgmtApplication in 4.209 seconds (JVM running for 4.683)
+2019-02-08 09:33:44 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.mitrais.book_library_mgmt.BookLibraryMgmtApplicationTests], using SpringBootContextLoader
+2019-02-08 09:33:44 - Could not detect default resource locations for test class [com.mitrais.book_library_mgmt.BookLibraryMgmtApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-02-08 09:33:44 - Could not detect default configuration classes for test class [com.mitrais.book_library_mgmt.BookLibraryMgmtApplicationTests]: BookLibraryMgmtApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-02-08 09:33:44 - Found @SpringBootConfiguration com.mitrais.book_library_mgmt.BookLibraryMgmtApplication for test class com.mitrais.book_library_mgmt.BookLibraryMgmtApplicationTests
+2019-02-08 09:33:44 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-02-08 09:33:44 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6babf3bf, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3059cbc, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7ea9e1e2, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@24fcf36f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@10feca44, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3fb1549b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@ea6147e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4d02f94e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2b48a640, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1e683a3e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2053d869, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7a419da4]
+2019-02-08 09:33:44 - Starting BookLibraryMgmtApplicationTests on MTPC7080 with PID 14016 (started by Aji_AM600 in D:\01_DEVELOPMENT\01_JAVA\01_WORKSPACE\01_GIT\01_TASKs\02_SIMPLE_BOOK_LIB_MGMT\book_library_mgmt)
+2019-02-08 09:33:44 - No active profile set, falling back to default profiles: default
+2019-02-08 09:33:45 - No MyBatis mapper was found in '[com.mitrais.book_library_mgmt]' package. Please check your configuration.
+2019-02-08 09:33:45 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-08 09:33:45 - Finished Spring Data repository scanning in 31ms. Found 1 repository interfaces.
+2019-02-08 09:33:45 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2c433692] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:33:45 - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$abc383c4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:33:45 - HikariPool-1 - Starting...
+2019-02-08 09:33:45 - HikariPool-1 - Start completed.
+2019-02-08 09:33:45 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-08 09:33:45 - HHH000412: Hibernate Core {5.3.7.Final}
+2019-02-08 09:33:45 - HHH000206: hibernate.properties not found
+2019-02-08 09:33:46 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-02-08 09:33:46 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-02-08 09:33:46 - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2019-02-08 09:33:46 - alter table book drop foreign key FKp7vf5b2vkphwbbfntbcoo7aby
+2019-02-08 09:33:46 - GenerationTarget encountered exception accepting command : Error executing DDL "alter table book drop foreign key FKp7vf5b2vkphwbbfntbcoo7aby" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table book drop foreign key FKp7vf5b2vkphwbbfntbcoo7aby" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:375)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:359)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:331)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:230)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:154)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:126)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:144)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:72)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:310)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:467)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:939)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1741)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1083)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:853)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:127)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'book_lib_mgmt.book' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:782)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:666)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 61 common frames omitted
+2019-02-08 09:33:46 - drop table if exists book
+2019-02-08 09:33:46 - drop table if exists shelf
+2019-02-08 09:33:46 - create table book (id varchar(255) not null, author varchar(30) not null, is_deleted boolean NOT NULL DEFAULT false, is_shelved boolean NOT NULL DEFAULT false, isbn varchar(25) not null, title varchar(50) not null, shelf_id varchar(255) not null, primary key (id)) engine=InnoDB
+2019-02-08 09:33:46 - create table shelf (id varchar(255) not null, current_capacity bigint, max_capacity bigint, primary key (id)) engine=InnoDB
+2019-02-08 09:33:46 - alter table book add constraint FKp7vf5b2vkphwbbfntbcoo7aby foreign key (shelf_id) references shelf (id)
+2019-02-08 09:33:46 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2f4d01b6'
+2019-02-08 09:33:46 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-08 09:33:47 - Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-08 09:33:47 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-02-08 09:33:48 - Started BookLibraryMgmtApplicationTests in 3.875 seconds (JVM running for 4.537)
+2019-02-08 09:33:48 - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-08 09:33:48 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-02-08 09:33:48 - HikariPool-1 - Shutdown initiated...
+2019-02-08 09:33:48 - HikariPool-1 - Shutdown completed.
+2019-02-08 09:33:51 - Starting BookLibraryMgmtApplication on MTPC7080 with PID 8600 (D:\01_DEVELOPMENT\01_JAVA\01_WORKSPACE\01_GIT\01_TASKs\02_SIMPLE_BOOK_LIB_MGMT\book_library_mgmt\target\classes started by Aji_AM600 in D:\01_DEVELOPMENT\01_JAVA\01_WORKSPACE\01_GIT\01_TASKs\02_SIMPLE_BOOK_LIB_MGMT\book_library_mgmt)
+2019-02-08 09:33:51 - No active profile set, falling back to default profiles: default
+2019-02-08 09:33:51 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-02-08 09:33:51 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-02-08 09:33:52 - No MyBatis mapper was found in '[com.mitrais.book_library_mgmt]' package. Please check your configuration.
+2019-02-08 09:33:52 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-08 09:33:52 - Finished Spring Data repository scanning in 32ms. Found 1 repository interfaces.
+2019-02-08 09:33:52 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f595518e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:33:52 - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$75159ec0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:33:52 - Tomcat initialized with port(s): 8082 (http)
+2019-02-08 09:33:52 - Initializing ProtocolHandler ["http-nio-8082"]
+2019-02-08 09:33:52 - Starting service [Tomcat]
+2019-02-08 09:33:52 - Starting Servlet Engine: Apache Tomcat/9.0.12
+2019-02-08 09:33:52 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Git\cmd;C:\Users\Aji_AM600\AppData\Local\Microsoft\WindowsApps;C:\Users\Aji_AM600\AppData\Local\Programs\Microsoft VS Code\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\Aji_AM600\AppData\Local\Pandoc\;D:\05_TOOLS\apache-maven-3.6.0\bin;C:\Program Files\Java\jdk1.8.0_192\bin;;.]
+2019-02-08 09:33:53 - Initializing Spring embedded WebApplicationContext
+2019-02-08 09:33:53 - Root WebApplicationContext: initialization completed in 1567 ms
+2019-02-08 09:33:53 - Servlet dispatcherServlet mapped to [/]
+2019-02-08 09:33:53 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-08 09:33:53 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-08 09:33:53 - Mapping filter: 'formContentFilter' to: [/*]
+2019-02-08 09:33:53 - Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-08 09:33:53 - HikariPool-1 - Starting...
+2019-02-08 09:33:53 - HikariPool-1 - Start completed.
+2019-02-08 09:33:53 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-08 09:33:53 - HHH000412: Hibernate Core {5.3.7.Final}
+2019-02-08 09:33:53 - HHH000206: hibernate.properties not found
+2019-02-08 09:33:53 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-02-08 09:33:53 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-02-08 09:33:53 - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2019-02-08 09:33:54 - alter table book drop foreign key FKp7vf5b2vkphwbbfntbcoo7aby
+2019-02-08 09:33:54 - drop table if exists book
+2019-02-08 09:33:54 - drop table if exists shelf
+2019-02-08 09:33:54 - create table book (id varchar(255) not null, author varchar(30) not null, is_deleted boolean NOT NULL DEFAULT false, is_shelved boolean NOT NULL DEFAULT false, isbn varchar(25) not null, title varchar(50) not null, shelf_id varchar(255) not null, primary key (id)) engine=InnoDB
+2019-02-08 09:33:54 - create table shelf (id varchar(255) not null, current_capacity bigint, max_capacity bigint, primary key (id)) engine=InnoDB
+2019-02-08 09:33:54 - alter table book add constraint FKp7vf5b2vkphwbbfntbcoo7aby foreign key (shelf_id) references shelf (id)
+2019-02-08 09:33:54 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7f2211c1'
+2019-02-08 09:33:54 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-08 09:33:54 - LiveReload server is running on port 35729
+2019-02-08 09:33:54 - Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-08 09:33:55 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-02-08 09:33:55 - Starting ProtocolHandler ["http-nio-8082"]
+2019-02-08 09:33:55 - Using a shared selector for servlet write/read
+2019-02-08 09:33:55 - Tomcat started on port(s): 8082 (http) with context path ''
+2019-02-08 09:33:55 - Started BookLibraryMgmtApplication in 4.234 seconds (JVM running for 4.685)
+2019-02-08 09:38:19 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.mitrais.book_library_mgmt.BookLibraryMgmtApplicationTests], using SpringBootContextLoader
+2019-02-08 09:38:19 - Could not detect default resource locations for test class [com.mitrais.book_library_mgmt.BookLibraryMgmtApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-02-08 09:38:19 - Could not detect default configuration classes for test class [com.mitrais.book_library_mgmt.BookLibraryMgmtApplicationTests]: BookLibraryMgmtApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-02-08 09:38:19 - Found @SpringBootConfiguration com.mitrais.book_library_mgmt.BookLibraryMgmtApplication for test class com.mitrais.book_library_mgmt.BookLibraryMgmtApplicationTests
+2019-02-08 09:38:19 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-02-08 09:38:19 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6babf3bf, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3059cbc, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7ea9e1e2, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@24fcf36f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@10feca44, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3fb1549b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@ea6147e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4d02f94e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2b48a640, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1e683a3e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2053d869, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7a419da4]
+2019-02-08 09:38:20 - Starting BookLibraryMgmtApplicationTests on MTPC7080 with PID 13280 (started by Aji_AM600 in D:\01_DEVELOPMENT\01_JAVA\01_WORKSPACE\01_GIT\01_TASKs\02_SIMPLE_BOOK_LIB_MGMT\book_library_mgmt)
+2019-02-08 09:38:20 - No active profile set, falling back to default profiles: default
+2019-02-08 09:38:20 - No MyBatis mapper was found in '[com.mitrais.book_library_mgmt]' package. Please check your configuration.
+2019-02-08 09:38:20 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-08 09:38:20 - Finished Spring Data repository scanning in 47ms. Found 1 repository interfaces.
+2019-02-08 09:38:20 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2c433692] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:38:21 - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$abc383c4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:38:21 - HikariPool-1 - Starting...
+2019-02-08 09:38:21 - HikariPool-1 - Start completed.
+2019-02-08 09:38:21 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-08 09:38:21 - HHH000412: Hibernate Core {5.3.7.Final}
+2019-02-08 09:38:21 - HHH000206: hibernate.properties not found
+2019-02-08 09:38:21 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-02-08 09:38:21 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-02-08 09:38:21 - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2019-02-08 09:38:22 - alter table book drop foreign key FKp7vf5b2vkphwbbfntbcoo7aby
+2019-02-08 09:38:22 - GenerationTarget encountered exception accepting command : Error executing DDL "alter table book drop foreign key FKp7vf5b2vkphwbbfntbcoo7aby" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table book drop foreign key FKp7vf5b2vkphwbbfntbcoo7aby" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:375)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:359)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:331)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:230)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:154)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:126)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:144)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:72)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:310)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:467)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:939)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1741)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1083)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:853)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:127)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'book_lib_mgmt.book' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:782)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:666)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 61 common frames omitted
+2019-02-08 09:38:22 - drop table if exists book
+2019-02-08 09:38:22 - drop table if exists shelf
+2019-02-08 09:38:22 - create table book (id varchar(255) not null, author varchar(30) not null, is_deleted boolean NOT NULL DEFAULT false, is_shelved boolean NOT NULL DEFAULT false, isbn varchar(25) not null, title varchar(50) not null, shelf_id varchar(255) not null, primary key (id)) engine=InnoDB
+2019-02-08 09:38:22 - create table shelf (id varchar(255) not null, current_capacity bigint, max_capacity bigint, primary key (id)) engine=InnoDB
+2019-02-08 09:38:22 - alter table book add constraint FKp7vf5b2vkphwbbfntbcoo7aby foreign key (shelf_id) references shelf (id)
+2019-02-08 09:38:22 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@d6b532f'
+2019-02-08 09:38:22 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-08 09:38:23 - Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-08 09:38:23 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-02-08 09:38:23 - Started BookLibraryMgmtApplicationTests in 3.875 seconds (JVM running for 4.52)
+2019-02-08 09:38:23 - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-08 09:38:23 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-02-08 09:38:23 - HikariPool-1 - Shutdown initiated...
+2019-02-08 09:38:23 - HikariPool-1 - Shutdown completed.
+2019-02-08 09:38:26 - Starting BookLibraryMgmtApplication on MTPC7080 with PID 13068 (D:\01_DEVELOPMENT\01_JAVA\01_WORKSPACE\01_GIT\01_TASKs\02_SIMPLE_BOOK_LIB_MGMT\book_library_mgmt\target\classes started by Aji_AM600 in D:\01_DEVELOPMENT\01_JAVA\01_WORKSPACE\01_GIT\01_TASKs\02_SIMPLE_BOOK_LIB_MGMT\book_library_mgmt)
+2019-02-08 09:38:26 - No active profile set, falling back to default profiles: default
+2019-02-08 09:38:26 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-02-08 09:38:26 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-02-08 09:38:27 - No MyBatis mapper was found in '[com.mitrais.book_library_mgmt]' package. Please check your configuration.
+2019-02-08 09:38:27 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-08 09:38:27 - Finished Spring Data repository scanning in 31ms. Found 1 repository interfaces.
+2019-02-08 09:38:27 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e85ff78f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:38:27 - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$67e044c1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:38:28 - Tomcat initialized with port(s): 8082 (http)
+2019-02-08 09:38:28 - Initializing ProtocolHandler ["http-nio-8082"]
+2019-02-08 09:38:28 - Starting service [Tomcat]
+2019-02-08 09:38:28 - Starting Servlet Engine: Apache Tomcat/9.0.12
+2019-02-08 09:38:28 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Git\cmd;C:\Users\Aji_AM600\AppData\Local\Microsoft\WindowsApps;C:\Users\Aji_AM600\AppData\Local\Programs\Microsoft VS Code\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\Aji_AM600\AppData\Local\Pandoc\;D:\05_TOOLS\apache-maven-3.6.0\bin;C:\Program Files\Java\jdk1.8.0_192\bin;;.]
+2019-02-08 09:38:28 - Initializing Spring embedded WebApplicationContext
+2019-02-08 09:38:28 - Root WebApplicationContext: initialization completed in 1560 ms
+2019-02-08 09:38:28 - Servlet dispatcherServlet mapped to [/]
+2019-02-08 09:38:28 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-08 09:38:28 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-08 09:38:28 - Mapping filter: 'formContentFilter' to: [/*]
+2019-02-08 09:38:28 - Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-08 09:38:28 - HikariPool-1 - Starting...
+2019-02-08 09:38:28 - HikariPool-1 - Start completed.
+2019-02-08 09:38:28 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-08 09:38:28 - HHH000412: Hibernate Core {5.3.7.Final}
+2019-02-08 09:38:28 - HHH000206: hibernate.properties not found
+2019-02-08 09:38:29 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-02-08 09:38:29 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-02-08 09:38:29 - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2019-02-08 09:38:29 - alter table book drop foreign key FKp7vf5b2vkphwbbfntbcoo7aby
+2019-02-08 09:38:29 - drop table if exists book
+2019-02-08 09:38:29 - drop table if exists shelf
+2019-02-08 09:38:29 - create table book (id varchar(255) not null, author varchar(30) not null, is_deleted boolean NOT NULL DEFAULT false, is_shelved boolean NOT NULL DEFAULT false, isbn varchar(25) not null, title varchar(50) not null, shelf_id varchar(255) not null, primary key (id)) engine=InnoDB
+2019-02-08 09:38:29 - create table shelf (id varchar(255) not null, current_capacity bigint, max_capacity bigint, primary key (id)) engine=InnoDB
+2019-02-08 09:38:29 - alter table book add constraint FKp7vf5b2vkphwbbfntbcoo7aby foreign key (shelf_id) references shelf (id)
+2019-02-08 09:38:29 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@245fd042'
+2019-02-08 09:38:29 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-08 09:38:29 - LiveReload server is running on port 35729
+2019-02-08 09:38:30 - Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-08 09:38:30 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-02-08 09:38:30 - Starting ProtocolHandler ["http-nio-8082"]
+2019-02-08 09:38:31 - Using a shared selector for servlet write/read
+2019-02-08 09:38:31 - Tomcat started on port(s): 8082 (http) with context path ''
+2019-02-08 09:38:31 - Started BookLibraryMgmtApplication in 4.278 seconds (JVM running for 4.737)
+2019-02-08 09:42:39 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-02-08 09:42:39 - Initializing Servlet 'dispatcherServlet'
+2019-02-08 09:42:39 - Completed initialization in 19 ms
+2019-02-08 09:43:03 - HHH000397: Using ASTQueryTranslatorFactory
+2019-02-08 09:43:03 - select book0_.id as id1_0_, book0_.author as author2_0_, book0_.is_deleted as is_delet3_0_, book0_.is_shelved as is_shelv4_0_, book0_.isbn as isbn5_0_, book0_.shelf_id as shelf_id7_0_, book0_.title as title6_0_ from book book0_ limit ?
+2019-02-08 09:53:46 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.mitrais.book_library_mgmt.BookLibraryMgmtApplicationTests], using SpringBootContextLoader
+2019-02-08 09:53:46 - Could not detect default resource locations for test class [com.mitrais.book_library_mgmt.BookLibraryMgmtApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-02-08 09:53:46 - Could not detect default configuration classes for test class [com.mitrais.book_library_mgmt.BookLibraryMgmtApplicationTests]: BookLibraryMgmtApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-02-08 09:53:46 - Found @SpringBootConfiguration com.mitrais.book_library_mgmt.BookLibraryMgmtApplication for test class com.mitrais.book_library_mgmt.BookLibraryMgmtApplicationTests
+2019-02-08 09:53:46 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-02-08 09:53:46 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6babf3bf, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3059cbc, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7ea9e1e2, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@24fcf36f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@10feca44, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3fb1549b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@ea6147e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4d02f94e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2b48a640, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1e683a3e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2053d869, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7a419da4]
+2019-02-08 09:53:47 - Starting BookLibraryMgmtApplicationTests on MTPC7080 with PID 15976 (started by Aji_AM600 in D:\01_DEVELOPMENT\01_JAVA\01_WORKSPACE\01_GIT\01_TASKs\02_SIMPLE_BOOK_LIB_MGMT\book_library_mgmt)
+2019-02-08 09:53:47 - No active profile set, falling back to default profiles: default
+2019-02-08 09:53:47 - No MyBatis mapper was found in '[com.mitrais.book_library_mgmt]' package. Please check your configuration.
+2019-02-08 09:53:47 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-08 09:53:47 - Finished Spring Data repository scanning in 47ms. Found 1 repository interfaces.
+2019-02-08 09:53:48 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2c433692] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:53:48 - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$abc383c4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:53:48 - HikariPool-1 - Starting...
+2019-02-08 09:53:48 - HikariPool-1 - Start completed.
+2019-02-08 09:53:48 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-08 09:53:48 - HHH000412: Hibernate Core {5.3.7.Final}
+2019-02-08 09:53:48 - HHH000206: hibernate.properties not found
+2019-02-08 09:53:48 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-02-08 09:53:48 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-02-08 09:53:48 - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2019-02-08 09:53:49 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-08 09:53:50 - Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-08 09:53:50 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-02-08 09:53:50 - Started BookLibraryMgmtApplicationTests in 3.701 seconds (JVM running for 4.352)
+2019-02-08 09:53:50 - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-08 09:53:50 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-02-08 09:53:50 - HikariPool-1 - Shutdown initiated...
+2019-02-08 09:53:50 - HikariPool-1 - Shutdown completed.
+2019-02-08 09:53:53 - Starting BookLibraryMgmtApplication on MTPC7080 with PID 10368 (D:\01_DEVELOPMENT\01_JAVA\01_WORKSPACE\01_GIT\01_TASKs\02_SIMPLE_BOOK_LIB_MGMT\book_library_mgmt\target\classes started by Aji_AM600 in D:\01_DEVELOPMENT\01_JAVA\01_WORKSPACE\01_GIT\01_TASKs\02_SIMPLE_BOOK_LIB_MGMT\book_library_mgmt)
+2019-02-08 09:53:53 - No active profile set, falling back to default profiles: default
+2019-02-08 09:53:53 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-02-08 09:53:53 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-02-08 09:53:54 - No MyBatis mapper was found in '[com.mitrais.book_library_mgmt]' package. Please check your configuration.
+2019-02-08 09:53:54 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-08 09:53:54 - Finished Spring Data repository scanning in 32ms. Found 1 repository interfaces.
+2019-02-08 09:53:54 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7ffc7483] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:53:54 - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$ff7cc1b5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:53:55 - Tomcat initialized with port(s): 8082 (http)
+2019-02-08 09:53:55 - Initializing ProtocolHandler ["http-nio-8082"]
+2019-02-08 09:53:55 - Starting service [Tomcat]
+2019-02-08 09:53:55 - Starting Servlet Engine: Apache Tomcat/9.0.12
+2019-02-08 09:53:55 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Git\cmd;C:\Users\Aji_AM600\AppData\Local\Microsoft\WindowsApps;C:\Users\Aji_AM600\AppData\Local\Programs\Microsoft VS Code\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\Aji_AM600\AppData\Local\Pandoc\;D:\05_TOOLS\apache-maven-3.6.0\bin;C:\Program Files\Java\jdk1.8.0_192\bin;;.]
+2019-02-08 09:53:55 - Initializing Spring embedded WebApplicationContext
+2019-02-08 09:53:55 - Root WebApplicationContext: initialization completed in 1572 ms
+2019-02-08 09:53:55 - Servlet dispatcherServlet mapped to [/]
+2019-02-08 09:53:55 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-08 09:53:55 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-08 09:53:55 - Mapping filter: 'formContentFilter' to: [/*]
+2019-02-08 09:53:55 - Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-08 09:53:55 - HikariPool-1 - Starting...
+2019-02-08 09:53:55 - HikariPool-1 - Start completed.
+2019-02-08 09:53:55 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-08 09:53:55 - HHH000412: Hibernate Core {5.3.7.Final}
+2019-02-08 09:53:55 - HHH000206: hibernate.properties not found
+2019-02-08 09:53:55 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-02-08 09:53:55 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-02-08 09:53:56 - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2019-02-08 09:53:56 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-08 09:53:57 - Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-08 09:53:57 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-02-08 09:53:57 - LiveReload server is running on port 35729
+2019-02-08 09:53:57 - Starting ProtocolHandler ["http-nio-8082"]
+2019-02-08 09:53:57 - Using a shared selector for servlet write/read
+2019-02-08 09:53:57 - Tomcat started on port(s): 8082 (http) with context path '/lib-mgmt'
+2019-02-08 09:53:57 - Started BookLibraryMgmtApplication in 4.069 seconds (JVM running for 4.523)
+2019-02-08 09:54:22 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-02-08 09:54:22 - Initializing Servlet 'dispatcherServlet'
+2019-02-08 09:54:22 - Completed initialization in 16 ms
+2019-02-08 09:54:30 - HHH000397: Using ASTQueryTranslatorFactory
+2019-02-08 09:54:30 - select book0_.id as id1_0_, book0_.author as author2_0_, book0_.is_deleted as is_delet3_0_, book0_.is_shelved as is_shelv4_0_, book0_.isbn as isbn5_0_, book0_.shelf_id as shelf_id7_0_, book0_.title as title6_0_ from book book0_ limit ?
