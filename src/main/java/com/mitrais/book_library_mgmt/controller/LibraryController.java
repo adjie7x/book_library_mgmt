@@ -1,4 +1,11 @@
 package com.mitrais.book_library_mgmt.controller;
 
-public class LibraryController {
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/api/library")
+public class LibraryController extends BaseController{
+
+
 }

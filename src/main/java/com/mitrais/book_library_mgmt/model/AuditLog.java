@@ -27,10 +27,10 @@ public class AuditLog implements Serializable {
     @Column(name = "service_name")
     private String serviceName;
 
-    @Column(name = "request_payload")
+    @Column(name = "request_payload", columnDefinition = "TEXT")
     private String requestPayload;
 
-    @Column(name = "response_payload")
+    @Column(name = "response_payload", columnDefinition = "TEXT")
     private String responsePayload;
 
     @Column(name = "created_date")
@@ -39,7 +39,7 @@ public class AuditLog implements Serializable {
     @Column(name = "channel")
     private String channel;
 
-    @Column(name = "response_exception")
+    @Column(name = "response_exception", columnDefinition = "TEXT")
     private String responseException;
 
     public String getId() {

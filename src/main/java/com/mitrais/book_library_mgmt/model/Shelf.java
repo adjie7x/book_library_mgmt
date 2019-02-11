@@ -1,5 +1,6 @@
 package com.mitrais.book_library_mgmt.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -17,10 +18,10 @@ public class Shelf implements Serializable {
     private String id;
 
     @Column(name = "max_capacity")
-    private long maxCapacity;
+    private Long maxCapacity;
 
     @Column(name = "current_capacity")
-    private long currentCapacity;
+    private Long currentCapacity;
 
 
     @OneToMany(mappedBy = "shelf")
@@ -34,7 +35,7 @@ public class Shelf implements Serializable {
         this.id = id;
     }
 
-    public long getMaxCapacity() {
+    public Long getMaxCapacity() {
         return maxCapacity;
     }
 
@@ -42,11 +43,11 @@ public class Shelf implements Serializable {
         this.maxCapacity = maxCapacity;
     }
 
-    public long getCurrentCapacity() {
+    public Long getCurrentCapacity() {
         return currentCapacity;
     }
 
-    public void setCurrentCapacity(long currentCapacity) {
+    public void setCurrentCapacity(Long currentCapacity) {
         this.currentCapacity = currentCapacity;
     }
 
