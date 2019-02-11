@@ -75,7 +75,7 @@ public class BaseController {
     }
 
     protected RestResponse getFailedResponse(Object object){
-        return initializeDefaultResponse("200", object);
+        return initializeDefaultResponse("500", object);
     }
 
     protected void logging(HttpServletRequest request, String methodName, String requestPayload, RestResponse responsePayload){
@@ -108,7 +108,7 @@ public class BaseController {
         log.setCreatedDate(new Date());
         log.setChannel("LIBMGMT_WEB");
         log.setOperationName(methodName);
-        log.setResponsePayload(getJsonStringFromObject(responsePayload.getResponse()));
+        log.setResponsePayload(getJsonStringFromObject(responsePayload));
         log.setEndPoint("");
 
         //Karena di database column service name 50, ada kemungkinan method GET servlet path >50. maka di split

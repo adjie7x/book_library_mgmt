@@ -40,16 +40,16 @@ public class ShelfController extends BaseController {
 
         }catch (JsonParseException e) {
             e.printStackTrace();
-            response = getFailedResponse(e);
+            response = getFailedResponse(e.toString());
         } catch (JsonMappingException e) {
             e.printStackTrace();
-            response = getFailedResponse(e);
+            response = getFailedResponse(e.toString());
         } catch (IOException e) {
             e.printStackTrace();
-            response = getFailedResponse(e);
+            response = getFailedResponse(e.toString());
         }catch (Exception e){
             e.printStackTrace();
-            response = getFailedResponse(e);
+            response = getFailedResponse(e.toString());
         } finally {
             loggingNoEncrypt(request, methodName, requestBody, response);
         }
@@ -97,5 +97,7 @@ public class ShelfController extends BaseController {
 
         return response;
     }
+
+
 
 }
