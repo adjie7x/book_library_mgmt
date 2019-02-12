@@ -2,6 +2,8 @@ package com.mitrais.book_library_mgmt.controller;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
+import com.mitrais.book_library_mgmt.controller.dto.ShelfDTO;
+import com.mitrais.book_library_mgmt.controller.utility.HeaderUtil;
 import com.mitrais.book_library_mgmt.model.RestResponse;
 import com.mitrais.book_library_mgmt.model.Shelf;
 import com.mitrais.book_library_mgmt.service.ShelfService;
@@ -9,10 +11,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.List;
 
 @RestController
@@ -98,6 +103,16 @@ public class ShelfController extends BaseController {
         return response;
     }
 
+    public ResponseEntity<ShelfDTO> createShelf(@Valid @RequestBody ShelfDTO shelfDTO) throws URISyntaxException{
+        String methodName = "::createShelf";
+        logger.info("========= createShelf in=========");
 
+        if (shelfDTO.getId() != null){
+            return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert("shelf", "idexists", "A new Shelf cannot already have an ID")).body(null);
+        }
+
+        logger.info("========= createShelf out=========");
+
+    }
 
 }
