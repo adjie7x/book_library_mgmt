@@ -1,5 +1,7 @@
 package com.mitrais.book_library_mgmt.service.impl;
 
+import com.mitrais.book_library_mgmt.service.dto.ShelfDTO;
+import com.mitrais.book_library_mgmt.service.mapper.ShelfDTOMapper;
 import com.mitrais.book_library_mgmt.model.Shelf;
 import com.mitrais.book_library_mgmt.repository.ShelfRepository;
 import com.mitrais.book_library_mgmt.service.ShelfService;
@@ -30,5 +32,14 @@ public class ShelfServiceImpl implements ShelfService {
         Shelf response = shelfRepository.save(shelf);
 
         return response;
+    }
+
+    @Override
+    public ShelfDTO create(ShelfDTO shelfDTO) throws Exception {
+
+        Shelf shelf = ShelfDTOMapper.INSTANCE.shelfDTOToShelf(shelfDTO);
+        shelf = shelfRepository.save(shelf);
+
+        return ShelfDTOMapper.INSTANCE.shelfToShelfDTO(shelf);
     }
 }

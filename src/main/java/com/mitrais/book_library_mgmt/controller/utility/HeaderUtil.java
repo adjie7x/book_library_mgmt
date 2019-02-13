@@ -36,8 +36,8 @@ public final class HeaderUtil {
     public static HttpHeaders createFailureAlert(String entityName, String errorKey, String defaultMessage) {
         log.error("Entity creation failed, {}", defaultMessage);
         HttpHeaders headers = new HttpHeaders();
-        headers.add("X-fidusiaApp-error", defaultMessage);
-        headers.add("X-fidusiaApp-params", entityName);
+        headers.add("X-LibMgmtApp-error", defaultMessage);
+        headers.add("X-LibMgmtApp-params", entityName);
         return headers;
     }
 

@@ -1,5 +1,6 @@
-package com.mitrais.book_library_mgmt.controller.dto;
+package com.mitrais.book_library_mgmt.service.dto;
 
+import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
@@ -9,11 +10,11 @@ public class ShelfDTO implements Serializable {
     private String id;
 
     @NotNull
-    @Size(max = 1000)
+    @Max(value = 1000)
     private Long maxCapacity;
 
     @NotNull
-    @Size(max = 1000)
+    @Max(value = 1000)
     private Long currentCapacity;
 
     public String getId() {

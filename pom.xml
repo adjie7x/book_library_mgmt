@@ -51,6 +51,12 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct-processor</artifactId>
+			<version>${mapstruct.version}</version>
+		</dependency>
+
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
@@ -103,8 +109,8 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<!--<plugin>
-				&lt;!&ndash;<groupId>org.apache.maven.plugins</groupId>&ndash;&gt;
+			<plugin>
+				<!--<groupId>org.apache.maven.plugins</groupId>-->
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
 					<annotationProcessors>
@@ -124,12 +130,12 @@
 							<version>${org.projectlombok.version}</version>
 						</path>
 					</annotationProcessorPaths>
-					&lt;!&ndash;<compilerArgs>
+					<!--<compilerArgs>
 						<arg>-Amapstruct.suppressGeneratorTimestamp=true</arg>
 						<arg>-Amapstruct.defaultComponentModel=spring</arg>
-					</compilerArgs>&ndash;&gt;
+					</compilerArgs>-->
 				</configuration>
-			</plugin>-->
+			</plugin>
 		</plugins>
 	</build>
 

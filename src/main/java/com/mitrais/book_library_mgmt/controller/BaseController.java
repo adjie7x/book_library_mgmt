@@ -10,6 +10,7 @@ import com.mitrais.book_library_mgmt.model.RestResponse;
 import com.mitrais.book_library_mgmt.service.AuditLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 
 import javax.servlet.http.HttpServletRequest;
@@ -114,6 +115,22 @@ public class BaseController {
         //Karena di database column service name 50, ada kemungkinan method GET servlet path >50. maka di split
         log.setServiceName(request.getServletPath().length() > 50 ? request.getServletPath().substring(0, 50) : request.getServletPath());
         log.setRequestPayload(requestPayload);
+        auditLogService.insert(log);
+
+    }
+
+    protected void loggingDTONoEncrypt(HttpServletRequest request, String methodName, Object object, ResponseEntity responseEntity){
+
+        AuditLog log = new AuditLog();
+        log.setCreatedDate(new Date());
+        log.setChannel("LIBMGMT_WEB");
+        log.setOperationName(methodName);
+        log.setResponsePayload(getJsonStringFromObject(responseEntity));
+        log.setEndPoint("");
+
+        //Karena di database column service name 50, ada kemungkinan method GET servlet path >50. maka di split
+        log.setServiceName(request.getServletPath().length() > 50 ? request.getServletPath().substring(0, 50) : request.getServletPath());
+        log.setRequestPayload(getJsonStringFromObject(object));
         auditLogService.insert(log);
 
     }

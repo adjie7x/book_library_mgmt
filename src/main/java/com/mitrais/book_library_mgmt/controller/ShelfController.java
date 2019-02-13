@@ -2,7 +2,7 @@ package com.mitrais.book_library_mgmt.controller;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
-import com.mitrais.book_library_mgmt.controller.dto.ShelfDTO;
+import com.mitrais.book_library_mgmt.service.dto.ShelfDTO;
 import com.mitrais.book_library_mgmt.controller.utility.HeaderUtil;
 import com.mitrais.book_library_mgmt.model.RestResponse;
 import com.mitrais.book_library_mgmt.model.Shelf;
@@ -11,6 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,6 +20,7 @@ import javax.validation.Valid;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/shelf")
@@ -29,6 +31,9 @@ public class ShelfController extends BaseController {
     @Autowired
     @Qualifier("shelfService")
     ShelfService shelfService;
+
+//    @Inject
+//    private ShelfDTOMapper shelfDTOMapper;
 
     @PostMapping("/add")
     public RestResponse addShelf(HttpServletRequest request, @RequestBody String requestBody){
@@ -103,15 +108,35 @@ public class ShelfController extends BaseController {
         return response;
     }
 
-    public ResponseEntity<ShelfDTO> createShelf(@Valid @RequestBody ShelfDTO shelfDTO) throws URISyntaxException{
+    @PostMapping("/create")
+    public ResponseEntity<ShelfDTO> createShelf(HttpServletRequest request, @Valid @RequestBody ShelfDTO shelfDTO) throws URISyntaxException{
         String methodName = "::createShelf";
         logger.info("========= createShelf in=========");
 
-        if (shelfDTO.getId() != null){
-            return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert("shelf", "idexists", "A new Shelf cannot already have an ID")).body(null);
+        ResponseEntity<ShelfDTO> responseEntity = null;
+
+        ShelfDTO resultDto = null;
+        try {
+            if (shelfDTO.getId() != null){
+                responseEntity = ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert("shelf", "idexists", "A new Shelf cannot already have an ID")).body(null);
+            }else{
+                resultDto = shelfService.create(shelfDTO);
+                responseEntity = Optional.ofNullable(resultDto)
+                        .map(result -> new ResponseEntity<>(
+                                result,
+                                HttpStatus.OK))
+                        .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+            }
+
+        }catch (Exception e){
+            e.printStackTrace();
+            responseEntity = ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert("shelf", "exception", e.getMessage())).body(null);
+        }finally {
+            loggingDTONoEncrypt(request, methodName, shelfDTO, responseEntity);
         }
 
         logger.info("========= createShelf out=========");
+         return responseEntity;
 
     }
 

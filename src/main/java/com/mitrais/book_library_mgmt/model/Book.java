@@ -30,7 +30,7 @@ public class Book implements Serializable {
     private boolean isDeleted;
 
     @ManyToOne
-    @JoinColumn(name = "shelf_id", nullable = false)
+    @JoinColumn(name = "shelf_id", nullable = true)
     private Shelf shelf;
 
     public String getId() {
