@@ -45,18 +45,6 @@
 		<!--</dependency>-->
 
 		<dependency>
-			<groupId>org.mapstruct</groupId>
-			<artifactId>mapstruct-jdk8</artifactId>
-			<version>${mapstruct.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.mapstruct</groupId>
-			<artifactId>mapstruct-processor</artifactId>
-			<version>${mapstruct.version}</version>
-		</dependency>
-
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
@@ -101,6 +89,25 @@
 			<scope>test</scope>
 		</dependency>
 		-->
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${org.projectlombok.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct-jdk8</artifactId>
+			<version>${mapstruct.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct-processor</artifactId>
+			<version>${mapstruct.version}</version>
+			<!--<scope>provided</scope>-->
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -109,16 +116,17 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+
 			<!--<plugin>
-				&lt;!&ndash;<groupId>org.apache.maven.plugins</groupId>&ndash;&gt;
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<annotationProcessors>
+					&lt;!&ndash;<annotationProcessors>
 						<annotationProcessor>org.mapstruct.ap.MappingProcessor</annotationProcessor>
-					</annotationProcessors>
+					</annotationProcessors>&ndash;&gt;
 					<annotationProcessorPaths>
 						<source>${java.version}</source>
-						 	<target>${java.version}</target>
+						<target>${java.version}</target>
 						<path>
 							<groupId>org.mapstruct</groupId>
 							<artifactId>mapstruct-processor</artifactId>

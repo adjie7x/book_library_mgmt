@@ -13,4 +13,6 @@ public interface ShelfService {
 
     public ShelfDTO create(ShelfDTO shelfDTO) throws Exception;
 
+    public ShelfDTO findShelfById(String shelfId);
+
 }

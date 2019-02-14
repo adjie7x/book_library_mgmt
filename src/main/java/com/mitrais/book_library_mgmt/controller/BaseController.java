@@ -129,7 +129,7 @@ public class BaseController {
         log.setEndPoint("");
 
         //Karena di database column service name 50, ada kemungkinan method GET servlet path >50. maka di split
-        log.setServiceName(request.getServletPath().length() > 50 ? request.getServletPath().substring(0, 50) : request.getServletPath());
+        log.setServiceName(request.getServletPath().length() > 50 ? request.getServletPath().substring(0, 50) : request.getRequestURI()+"?"+request.getQueryString());
         log.setRequestPayload(getJsonStringFromObject(object));
         auditLogService.insert(log);
 

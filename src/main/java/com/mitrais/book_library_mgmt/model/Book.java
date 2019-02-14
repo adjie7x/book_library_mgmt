@@ -80,4 +80,12 @@ public class Book implements Serializable {
     public void setDeleted(boolean deleted) {
         isDeleted = deleted;
     }
+
+    public Shelf getShelf() {
+        return shelf;
+    }
+
+    public void setShelf(Shelf shelf) {
+        this.shelf = shelf;
+    }
 }

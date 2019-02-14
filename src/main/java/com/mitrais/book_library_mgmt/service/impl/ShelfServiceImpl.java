@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service("shelfService")
 public class ShelfServiceImpl implements ShelfService {
@@ -41,5 +42,13 @@ public class ShelfServiceImpl implements ShelfService {
         shelf = shelfRepository.save(shelf);
 
         return ShelfDTOMapper.INSTANCE.shelfToShelfDTO(shelf);
+    }
+
+    @Override
+    public ShelfDTO findShelfById(String shelfId) {
+
+        Optional<Shelf> shelf = shelfRepository.findById(shelfId);
+
+        return ShelfDTOMapper.INSTANCE.shelfToShelfDTO(shelf.get());
     }
 }
