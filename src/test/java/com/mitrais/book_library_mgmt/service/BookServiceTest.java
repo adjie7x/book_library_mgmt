@@ -26,7 +26,7 @@ public class BookServiceTest {
     private BookServiceImpl bookService;
 
     @Test
-    @Ignore
+//    @Ignore
     public void bookServiceCreateTest(){
 
 //        Book expected = new Book();
@@ -48,11 +48,13 @@ public class BookServiceTest {
         }
 
 
-        verify(bookRepository).save(any());
+        verify(bookRepository).save(any(Book.class));
 
 
 
     }
+
+
 
     @Test
     @Ignore
