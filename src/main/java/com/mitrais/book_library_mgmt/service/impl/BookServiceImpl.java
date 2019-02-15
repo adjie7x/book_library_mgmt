@@ -9,6 +9,7 @@ import com.mitrais.book_library_mgmt.service.dto.BookDTO;
 import com.mitrais.book_library_mgmt.service.dto.BookShelfDTO;
 import com.mitrais.book_library_mgmt.service.mapper.BookDTOMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -27,7 +28,7 @@ public class BookServiceImpl implements BookService {
     ShelfRepository shelfRepository;
 
     @Override
-    public BookDTO create(BookDTO bookDTO) throws Exception {
+    public BookDTO create(BookDTO bookDTO) throws DataAccessException {
 
         Book book = BookDTOMapper.INSTANCE.bookDTOToBook(bookDTO);
         book = bookRepository.save(book);
