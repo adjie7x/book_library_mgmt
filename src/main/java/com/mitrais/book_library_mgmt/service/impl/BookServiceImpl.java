@@ -41,7 +41,7 @@ public class BookServiceImpl implements BookService {
 
         List<Book> books = new ArrayList<>();
 
-        if(!"".equals(title) || title != null){
+        if(!"".equals(title) && title != null){
             if("shelved".equals(status) || "not_shelved".equals(status)){
                 books = bookRepository.findByIsShelvedAndTitle("shelved".equals(status)?true:false,title);
             }else{
