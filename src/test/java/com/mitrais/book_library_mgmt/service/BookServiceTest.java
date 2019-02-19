@@ -296,7 +296,7 @@ public class BookServiceTest {
         book.setShelf(shelf);
 
         when(bookRepository.findBookByIdAndShelfId(bookShelfDTO.getBookId(),bookShelfDTO.getShelfId())).thenReturn(
-                book
+                Optional.of(book)
         );
 
         bookService.removeBookFromShelf(bookShelfDTO);
@@ -313,22 +313,8 @@ public class BookServiceTest {
         bookShelfDTO.setBookId("bo001");
         bookShelfDTO.setShelfId("sh001");
 
-        Book book = new Book();
-        book.setId("bo001");
-        book.setShelved(false);
-        book.setAuthor("author");
-        book.setIsbn("isbn");
-        book.setTitle("title");
-
-        Shelf shelf = new Shelf();
-        shelf.setId("sh001");
-        shelf.setCurrentCapacity(Long.valueOf(9));
-        shelf.setMaxCapacity(Long.valueOf(10));
-
-        book.setShelf(shelf);
-
         when(bookRepository.findBookByIdAndShelfId(bookShelfDTO.getBookId(),bookShelfDTO.getShelfId())).thenReturn(
-                null
+                Optional.empty()
         );
 
         BookDTO bookDTO = bookService.removeBookFromShelf(bookShelfDTO);

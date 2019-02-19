@@ -89,7 +89,7 @@ public class BookServiceImpl implements BookService {
     @Transactional
     public BookDTO removeBookFromShelf(BookShelfDTO bookShelfDTO) {
 
-        Optional<Book> bookJ = Optional.of(bookRepository.findBookByIdAndShelfId(bookShelfDTO.getBookId(), bookShelfDTO.getShelfId()));
+        Optional<Book> bookJ = bookRepository.findBookByIdAndShelfId(bookShelfDTO.getBookId(), bookShelfDTO.getShelfId());
 
         if (bookJ.isPresent()){
 

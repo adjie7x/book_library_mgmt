@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface BookRepository extends JpaRepository<Book,String> {
 
@@ -16,6 +17,6 @@ public interface BookRepository extends JpaRepository<Book,String> {
     List<Book> findByIsShelved(boolean isShelved);
 
     @Query("SELECT b FROM Book b WHERE b.id = :id AND b.shelf.id = :shelfId")
-    Book findBookByIdAndShelfId(@Param("id") String id, @Param("shelfId") String shelfId);
+    Optional<Book> findBookByIdAndShelfId(@Param("id") String id, @Param("shelfId") String shelfId);
 
 }
