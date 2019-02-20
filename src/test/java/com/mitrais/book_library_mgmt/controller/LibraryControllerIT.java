@@ -1,4 +1,4 @@
-package com.mitrais.book_library_mgmt.service;
+package com.mitrais.book_library_mgmt.controller;
 
 import static org.junit.Assert.*;
 import static org.mockito.ArgumentMatchers.any;
