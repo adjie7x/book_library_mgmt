@@ -113,7 +113,7 @@ public class LibraryControllerIT {
                 .accept(MediaType.APPLICATION_JSON);
 
         mockMvc.perform(requestBuilder)
-                .andExpect(status().isOk())
+                .andExpect(status().isNoContent())
                 .andExpect(content().string(""))
                 .andDo(print())
                 .andReturn();

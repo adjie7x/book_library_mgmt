@@ -40,8 +40,12 @@ public class LibraryController extends BaseController{
 
         ShelfDTO shelfDTO = shelfService.findShelfById(id);
 
+        if(shelfDTO == null){
+            return ResponseEntity.noContent().build();
+        }
+
         ResponseEntity<ShelfDTO> responseEntity = new ResponseEntity<>(shelfDTO, HttpStatus.OK);
-//        loggingDTONoEncrypt(request, methodName, "{}", responseEntity);
+        loggingDTONoEncrypt(request, methodName, "{}", responseEntity);
 
         logger.info("========= findShelfById out=========");
 
