@@ -154,4 +154,38 @@ public class LibraryControllerIT {
 
     }
 
+    @Test
+    public void successRemoveBookFromShelf() throws Exception{
+        BookDTO bookDTO = new BookDTO();
+        bookDTO.setId("b0001");
+        bookDTO.setAuthor("author");
+        bookDTO.setIsbn("isbn");
+        bookDTO.setShelfId(null);
+        bookDTO.setTitle("title");
+
+        when(bookService.removeBookFromShelf(any(BookShelfDTO.class))).thenReturn(
+                bookDTO
+        );
+
+        BookShelfDTO bookShelfDTO = new BookShelfDTO();
+        bookShelfDTO.setBookId("b0001");
+        bookShelfDTO.setShelfId("s0001");
+
+        ObjectMapper mapper = new ObjectMapper();
+        String jsonStr = mapper.writeValueAsString(bookShelfDTO);
+
+        RequestBuilder requestBuilder = MockMvcRequestBuilders
+                .post("/api/library/remove")
+                .content(jsonStr)
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON);
+
+        mockMvc.perform(requestBuilder)
+                .andExpect(status().isOk())
+                .andExpect(content().json("{id:b0001,isbn:isbn,title:title,author:author,shelfId:null}"))
+                .andDo(print())
+                .andReturn();
+
+    }
+
 }
