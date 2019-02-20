@@ -317,9 +317,11 @@ public class BookServiceTest {
                 Optional.empty()
         );
 
-        BookDTO bookDTO = bookService.removeBookFromShelf(bookShelfDTO);
+//        BookDTO bookDTO = bookService.removeBookFromShelf(bookShelfDTO);
+        bookService.removeBookFromShelf(bookShelfDTO);
 
-        assertNull(bookDTO);
+//        assertNull(bookDTO);
+        verify(shelfRepository, times(0)).save(any(Shelf.class));
 
     }
 }
